@@ -19,4 +19,14 @@ describe('HashTable', () => {
       expect(myHashTable.size()).to.equal( 1 )
     })
   })
+
+  context('size()', () => {
+    it('returns the number of key-value pairs in the hash table.', () => {
+
+      const myHashTable = new HashTable()
+      myHashTable.put('foo')
+      myHashTable.put('too')
+      expect(myHashTable.size()).to.equal( 2 )
+    })
+  })
 })
