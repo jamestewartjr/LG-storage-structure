@@ -11,7 +11,7 @@
 
 export default class HashTable {
   constructor(){
-    this.table = new Array(137)
+    this.table = new Array(1)
 
   }
 
@@ -28,7 +28,6 @@ export default class HashTable {
     var position = this.hasher(data);
     this.table[position] = data;
   }
-
 
 
   size() {

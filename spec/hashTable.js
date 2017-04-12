@@ -12,8 +12,10 @@ describe('HashTable', () => {
   })
 
   context('put()', () => {
-    it('adds an element to the hash table.', () => {
+    it('addes an element to the hash table.', () => {
+
       const myHashTable = new HashTable()
+      myHashTable.put('foo')
       expect(myHashTable.size()).to.equal( 1 )
     })
   })
