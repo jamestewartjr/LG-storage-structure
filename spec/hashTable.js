@@ -11,12 +11,10 @@ describe('HashTable', () => {
     expect(HashTable).to.be.a('function')
   })
 
-  context('push()', () => {
-    it('pushes an element to the top of the stack.', () => {
+  context('put()', () => {
+    it('adds an element to the hash table.', () => {
       const myHashTable = new HashTable()
-
-      expect(() => myHashTable.push('foo'))
-        .to.alter(() => myHashTable.length(), { from: 0, to: 1 })
+      expect(myHashTable.size()).to.equal( 1 )
     })
   })
 })
