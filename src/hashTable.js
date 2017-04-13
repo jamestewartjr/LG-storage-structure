@@ -14,11 +14,11 @@ export default class HashTable {
     return total % this.table.length
   }
 
-  chainer() {
-    for(let i = 0; i < this.table.length; i++){
-      this.table[i] = new Array()
-    }
-  }
+  // chainer() {
+  //   for(let i = 0; i < this.table.length; i++){
+  //     this.table[i] = new Array()
+  //   }
+  // }
 
   put(data) {
     let position = this.hasher(data)
