@@ -55,4 +55,35 @@ describe('HashTable', () => {
       expect(myHashTable.get('name')).to.equal( -1  )
     })
   })
+
+  context('contains()', () => {
+    it('returns true if the hash table contains the key.', () => {
+
+      const myHashTable = new HashTable()
+      myHashTable.put('foo')
+      myHashTable.put('too')
+      expect(myHashTable.contains('foo')).to.equal( true )
+    })
+  })
+
+  context('iterate()', () => {
+    it('takes a callback function and passes it each key and value in sequence.', () => {
+
+      const myHashTable = new HashTable()
+      myHashTable.put('foo')
+      myHashTable.put('too')
+      expect(myHashTable.contains('foo')).to.equal( true )
+    })
+  })
+
+  context('remove()', () => {
+    it('removes a key-value pair by key.', () => {
+
+      const myHashTable = new HashTable()
+      myHashTable.put('foo')
+      myHashTable.put('too')
+      myHashTable.remove('foo')
+      expect(myHashTable.contains('foo')).to.equal( false )
+    })
+  })
 })
