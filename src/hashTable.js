@@ -35,4 +35,8 @@ export default class HashTable {
     }
     return this.table[this.hasher(data)]
   }
+
+  contains(data){
+    
+  }
 }
