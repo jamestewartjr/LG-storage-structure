@@ -72,7 +72,7 @@ describe('HashTable', () => {
       const myHashTable = new HashTable()
       myHashTable.put('foo')
       myHashTable.put('too')
-      expect(myHashTable.contains('foo')).to.equal( true )
+      expect(myHashTable.iterate('foo')).to.equal( 200 )
     })
   })
 

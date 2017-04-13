@@ -37,6 +37,10 @@ export default class HashTable {
   }
 
   contains(data){
-    
+    if(!this.table[this.hasher(data)]) {
+      return false
+    }
+    return true
   }
+
 }
