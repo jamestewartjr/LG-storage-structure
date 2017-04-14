@@ -14,12 +14,6 @@ export default class HashTable {
     return total % this.table.length
   }
 
-  // chainer() {
-  //   for(let i = 0; i < this.table.length; i++){
-  //     this.table[i] = new Array()
-  //   }
-  // }
-
   put(data) {
     let position = this.hasher(data)
     this.table[position] = this.hasher(data) + ": " + data
@@ -48,10 +42,16 @@ export default class HashTable {
     this.table.splice(position, 1)
   }
 
-  iterate( data , callback ) {
-    let results = data.map( (k, v) => (k, v))
-    console.log(results)
-    return results
-  }
+  // chainer() {
+  //   for(let i = 0; i < this.table.length; i++){
+  //     this.table[i] = new Array()
+  //   }
+  // }
+
+  // iterate( data , callback ) {
+  //   let results = data.map( (k, v) => (k, v))
+  //   console.log(results)
+  //   return results
+  // }
 
 }

@@ -66,6 +66,17 @@ describe('HashTable', () => {
     })
   })
 
+  context('remove()', () => {
+    it('removes a key-value pair by key.', () => {
+
+      const myHashTable = new HashTable()
+      myHashTable.put('foo')
+      myHashTable.put('too')
+      myHashTable.remove('foo')
+      expect(myHashTable.contains('foo')).to.equal( false )
+    })
+  })
+
   context('iterate()', () => {
     it('takes a callback function and passes it each key and value in sequence.', () => {
 
@@ -77,17 +88,6 @@ describe('HashTable', () => {
         console.log(`${k}: ${v}`)
       }
       expect(myHashTable.iterate( data, callback )).to.equal( 200 )
-    })
-  })
-
-  context('remove()', () => {
-    it('removes a key-value pair by key.', () => {
-
-      const myHashTable = new HashTable()
-      myHashTable.put('foo')
-      myHashTable.put('too')
-      myHashTable.remove('foo')
-      expect(myHashTable.contains('foo')).to.equal( false )
     })
   })
 })
