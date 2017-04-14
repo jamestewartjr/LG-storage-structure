@@ -72,7 +72,11 @@ describe('HashTable', () => {
       const myHashTable = new HashTable()
       myHashTable.put('foo')
       myHashTable.put('too')
-      expect(myHashTable.iterate('foo')).to.equal( 200 )
+      const data = [(1,54) ]
+      const callback = () => {
+        console.log(`${k}: ${v}`)
+      }
+      expect(myHashTable.iterate( data, callback )).to.equal( 200 )
     })
   })
 

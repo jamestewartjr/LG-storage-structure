@@ -48,6 +48,10 @@ export default class HashTable {
     this.table.splice(position, 1)
   }
 
-
+  iterate( data , callback ) {
+    let results = data.map( (k, v) => (k, v))
+    console.log(results)
+    return results
+  }
 
 }
