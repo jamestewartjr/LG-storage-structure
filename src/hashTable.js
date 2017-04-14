@@ -43,4 +43,11 @@ export default class HashTable {
     return true
   }
 
+  remove(data){
+    let position = this.table[this.hasher(data)]
+    this.table.splice(position, 1)
+  }
+
+
+
 }
